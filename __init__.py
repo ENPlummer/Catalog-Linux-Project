@@ -32,7 +32,8 @@ APPLICATION_NAME = "Oracle Books"
 # engine = create_engine('sqlite:///storeitemsinventory.db')
 
 # Connects to the database with users.
-engine = create_engine('sqlite:///storeitemsinventorywithusers.db')
+#engine = create_engine('sqlite:///storeitemsinventorywithusers.db')
+engine = create_engine('postgresql://catalog:plum6@localhost/catalog')
 
 Base.metadata.bind = engine
 
@@ -481,4 +482,4 @@ def deleteStoreItem(category_id, inventory_id):
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
-    app.run(host='localhost', port=8000)
+    app.run()

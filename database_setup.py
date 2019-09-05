@@ -74,7 +74,8 @@ class StoreItem(Base):
 # engine = create_engine('sqlite:///storeitemsinventory.db')
 
 # Creates a database with users.
-engine = create_engine('sqlite:///storeitemsinventorywithusers.db')
+#engine = create_engine('sqlite:///storeitemsinventorywithusers.db')
+engine = create_engine('postgresql://catalog:plum6@localhost/catalog')
 
 
 Base.metadata.create_all(engine)

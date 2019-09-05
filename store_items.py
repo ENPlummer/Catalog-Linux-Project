@@ -10,7 +10,8 @@ from database_setup import Category, Base, StoreItem, User
 # Connect to the database that was created in the database_set.py file.
 # engine = create_engine('sqlite:///storeitemsinventory.db')
 
-engine = create_engine('sqlite:///storeitemsinventorywithusers.db')
+#engine = create_engine('sqlite:///storeitemsinventorywithusers.db')
+engine = create_engine('postgresql://catalog:plum6@localhost/catalog')
 
 """
 Bind the engine to the metadata of the Base class so that the
